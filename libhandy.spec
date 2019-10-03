@@ -2,7 +2,7 @@
 %define major		0
 %define libname		%mklibname handy %{api} %{major}
 %define girhandyname	%mklibname handy-gir %{api}
-%define develname	%mklibname handy -d
+%define devname	%mklibname handy -d
 
 Name:		libhandy
 Version:	0.0.11
