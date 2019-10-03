@@ -6,7 +6,7 @@
 
 Name:		libhandy
 Version:	0.0.11
-Release:	%mkrel 1
+Release:	1
 Summary:	A GTK+ library to develop UI for mobile devices
 License:	LGPLv2+
 Group:		Development/GNOME and GTK+
@@ -46,14 +46,14 @@ GObject Introspection interface description for %{name}.
 
 #------------------------------------------------
 
-%package -n	%{develname}
+%package -n	%{devname}
 Summary:	Development package for %{name}
 Group:		Development/GNOME and GTK+
 Requires:	%{libname} = %{version}-%{release}
 Requires:	%{girhandyname} = %{version}-%{release}
 Provides:	handy-devel = %{version}-%{release}
 
-%description -n	%{develname}
+%description -n	%{devname}
 Header files for development with %{name}.
 
 #------------------------------------------------
@@ -95,7 +95,7 @@ of the provided Handy widgets in Glade.
 %files -n %{girhandyname}
 %{_libdir}/girepository-1.0/Handy-%{api}.typelib
 
-%files -n %{develname}
+%files -n %{devname}
 %license COPYING
 %doc AUTHORS README.md
 %{_includedir}/libhandy-%{api}/
