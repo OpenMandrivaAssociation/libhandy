@@ -1,12 +1,12 @@
-%define api		0.0
-%define major		0
-%define libname		%mklibname handy %{api} %{major}
-%define girhandyname	%mklibname handy-gir %{api}
-%define devname	%mklibname handy -d
+%define api 0.0
+%define major 0
+%define libname %mklibname handy %{api} %{major}
+%define girhandyname %mklibname handy-gir %{api}
+%define devname %mklibname handy -d
 
 Name:		libhandy
 Version:	0.0.11
-Release:	1
+Release:	2
 Summary:	A GTK+ library to develop UI for mobile devices
 License:	LGPLv2+
 Group:		Development/GNOME and GTK+
@@ -27,43 +27,44 @@ using GTK+/GNOME.
 
 #------------------------------------------------
 
-%package -n	%{libname}
+%package -n %{libname}
 Summary:	A GTK+ library to develop UI for mobile devices
 Group:		System/Libraries
 
-%description -n	%{libname}
+%description -n %{libname}
 This package provides the shared library for libhandy, a library to
 help with developing mobile UI using GTK+/GNOME.
 
 #------------------------------------------------
 
-%package -n	%{girhandyname}
+%package -n %{girhandyname}
 Summary:	GObject Introspection interface description for %{name}
 Group:		System/Libraries
 
-%description -n	%{girhandyname}
+%description -n %{girhandyname}
 GObject Introspection interface description for %{name}.
 
 #------------------------------------------------
 
-%package -n	%{devname}
+%package -n %{devname}
 Summary:	Development package for %{name}
 Group:		Development/GNOME and GTK+
 Requires:	%{libname} = %{version}-%{release}
 Requires:	%{girhandyname} = %{version}-%{release}
 Provides:	handy-devel = %{version}-%{release}
+Obsoletes:	__devname_ = 0.0.11-1
 
 %description -n	%{devname}
 Header files for development with %{name}.
 
 #------------------------------------------------
 
-%package -n	%{name}-glade
+%package -n %{name}-glade
 Summary:	Glade (GTK+3) modules for %{name}
 Group:		Graphical desktop/GNOME
 Requires:	glade
 
-%description -n	%{name}-glade
+%description -n %{name}-glade
 This package provides a catalog for Glade (GTK+3) which allows the use
 of the provided Handy widgets in Glade.
 
@@ -83,6 +84,7 @@ of the provided Handy widgets in Glade.
 	-Dexamples=false \
 	-Dglade_catalog=enabled \
 	%{nil}
+
 %meson_build
 %meson_build libhandy-doc
 
