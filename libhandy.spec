@@ -1,3 +1,5 @@
+%global optflags %{optflags} -Wno-error=incompatible-pointer-types-discards-qualifiers
+
 %define api 0.0
 %define major 0
 %define libname %mklibname handy %{api} %{major}
@@ -5,8 +7,8 @@
 %define devname %mklibname handy -d
 
 Name:		libhandy
-Version:	0.0.11
-Release:	2
+Version:	0.0.13
+Release:	1
 Summary:	A GTK+ library to develop UI for mobile devices
 License:	LGPLv2+
 Group:		Development/GNOME and GTK+
