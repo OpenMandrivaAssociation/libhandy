@@ -8,7 +8,7 @@
 
 Name:		libhandy
 Version:	0.0.13
-Release:	1
+Release:	2
 Summary:	A GTK+ library to develop UI for mobile devices
 License:	LGPLv2+
 Group:		Development/GNOME and GTK+
@@ -54,7 +54,7 @@ Group:		Development/GNOME and GTK+
 Requires:	%{libname} = %{version}-%{release}
 Requires:	%{girhandyname} = %{version}-%{release}
 Provides:	handy-devel = %{version}-%{release}
-Obsoletes:	__devname_ = 0.0.11-1
+Obsoletes:	__devname_ < 0.0.13
 
 %description -n	%{devname}
 Header files for development with %{name}.
