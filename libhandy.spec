@@ -75,7 +75,7 @@ of the provided Handy widgets in Glade.
 #------------------------------------------------
 
 %prep
-%autosetup -p1 -n %{name}-v%{version}
+%autosetup -p1 -n %{name}-%{version}
 
 %build
 %meson \
