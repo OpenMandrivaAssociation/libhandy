@@ -14,8 +14,6 @@ License:	LGPLv2+
 Group:		Development/GNOME and GTK+
 URL:		https://source.puri.sm/Librem5/libhandy/
 Source0:	https://source.puri.sm/Librem5/libhandy/-/archive/v%{version}/%{name}-v%{version}.tar.bz2
-# Fix build with Glade 3.36.0
-Patch0:		https://source.puri.sm/Librem5/libhandy/-/commit/be1843e1015779dd6c02160c140435e96db4da55.patch
 
 BuildRequires:	gtk-doc
 BuildRequires:	meson
