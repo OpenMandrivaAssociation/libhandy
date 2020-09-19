@@ -1,5 +1,7 @@
 %global optflags %{optflags} -Wno-error=incompatible-pointer-types-discards-qualifiers
 
+%define url_ver	%(echo %{version}|cut -d. -f1,2)
+
 %define api 0.0
 %define major 0
 %define libname %mklibname handy %{api} %{major}
@@ -13,7 +15,7 @@ Summary:	A GTK+ library to develop UI for mobile devices
 License:	LGPLv2+
 Group:		Development/GNOME and GTK+
 URL:		https://source.puri.sm/Librem5/libhandy/
-Source0:	https://source.puri.sm/Librem5/libhandy/-/archive/v%{version}/%{name}-v%{version}.tar.bz2
+Source0:	https://download.gnome.org/sources/%{name}/%{url_ver}/%{name}-%{version}.tar.xz
 
 BuildRequires:	gtk-doc
 BuildRequires:	meson
