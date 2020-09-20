@@ -111,7 +111,6 @@ of the provided Handy widgets in Glade.
 %{_libdir}/pkgconfig/libhandy-%{api}.pc
 %{_datadir}/vala/vapi/libhandy-%{api}.deps
 %{_datadir}/vala/vapi/libhandy-%{api}.vapi
-%{_datadir}/gtk-doc/html/libhandy/
 
 %files -n %{name}-glade
 %{_libdir}/glade/modules/*.so
