@@ -2,7 +2,7 @@
 
 %define url_ver	%(echo %{version}|cut -d. -f1,2)
 
-%define api 0.0
+%define api 1
 %define major 0
 %define libname %mklibname handy %{api} %{major}
 %define girhandyname %mklibname handy-gir %{api}
