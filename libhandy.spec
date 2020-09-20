@@ -31,10 +31,20 @@ libhandy is a library to help with developing UI for mobile devices
 using GTK+/GNOME.
 
 #------------------------------------------------
+%package common
+Summary:	A GTK+ library to develop UI for mobile devices
+Group:		System/Libraries
+
+%description common
+This package provides the shared library for libhandy, a library to
+help with developing mobile UI using GTK+/GNOME.
+
+#------------------------------------------------
 
 %package -n %{libname}
 Summary:	A GTK+ library to develop UI for mobile devices
 Group:		System/Libraries
+Requires:	%{name}-common
 
 %description -n %{libname}
 This package provides the shared library for libhandy, a library to
@@ -96,6 +106,10 @@ of the provided Handy widgets in Glade.
 %install
 %meson_install
 
+%find_lang %name
+
+%files common -f %{name}.lang
+
 %files -n %{libname}
 %{_libdir}/libhandy-%{api}.so.%{major}{,.*}
 
@@ -105,6 +119,7 @@ of the provided Handy widgets in Glade.
 %files -n %{devname}
 %license COPYING
 %doc AUTHORS README.md
+%doc %{_datadir}/gtk-doc/html/libhandy-%{api}/
 %{_includedir}/libhandy-%{api}/
 %{_libdir}/libhandy-%{api}.so
 %{_datadir}/gir-1.0/Handy-%{api}.gir
