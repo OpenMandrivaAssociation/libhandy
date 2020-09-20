@@ -1,21 +1,22 @@
 %global optflags %{optflags} -Wno-error=incompatible-pointer-types-discards-qualifiers
 
-%define api 0.0
+%define url_ver	%(echo %{version}|cut -d. -f1,2)
+
+%define api 1
 %define major 0
 %define libname %mklibname handy %{api} %{major}
 %define girhandyname %mklibname handy-gir %{api}
 %define devname %mklibname handy -d
 
 Name:		libhandy
-Version:	0.0.13
-Release:	3
+Version:	1.0.0
+Release:	1
 Summary:	A GTK+ library to develop UI for mobile devices
 License:	LGPLv2+
 Group:		Development/GNOME and GTK+
 URL:		https://source.puri.sm/Librem5/libhandy/
-Source0:	https://source.puri.sm/Librem5/libhandy/-/archive/v%{version}/%{name}-v%{version}.tar.bz2
-# Fix build with Glade 3.36.0
-Patch0:		https://source.puri.sm/Librem5/libhandy/-/commit/be1843e1015779dd6c02160c140435e96db4da55.patch
+Source0:	https://download.gnome.org/sources/%{name}/%{url_ver}/%{name}-%{version}.tar.xz
+Patch0:		https://gitlab.gnome.org/GNOME/libhandy/-/commit/0d3b58761247c51271af55bab4f731c90d35a41e.patch
 
 BuildRequires:	gtk-doc
 BuildRequires:	meson
@@ -75,7 +76,7 @@ of the provided Handy widgets in Glade.
 #------------------------------------------------
 
 %prep
-%autosetup -p1 -n %{name}-v%{version}
+%autosetup -p1 -n %{name}-%{version}
 
 %build
 %meson \
@@ -110,7 +111,6 @@ of the provided Handy widgets in Glade.
 %{_libdir}/pkgconfig/libhandy-%{api}.pc
 %{_datadir}/vala/vapi/libhandy-%{api}.deps
 %{_datadir}/vala/vapi/libhandy-%{api}.vapi
-%{_datadir}/gtk-doc/html/libhandy/
 
 %files -n %{name}-glade
 %{_libdir}/glade/modules/*.so
