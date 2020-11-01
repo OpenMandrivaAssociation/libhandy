@@ -9,14 +9,13 @@
 %define devname %mklibname handy -d
 
 Name:		libhandy
-Version:	1.0.0
+Version:	1.0.1
 Release:	1
 Summary:	A GTK+ library to develop UI for mobile devices
 License:	LGPLv2+
 Group:		Development/GNOME and GTK+
 URL:		https://source.puri.sm/Librem5/libhandy/
 Source0:	https://download.gnome.org/sources/%{name}/%{url_ver}/%{name}-%{version}.tar.xz
-Patch0:		https://gitlab.gnome.org/GNOME/libhandy/-/commit/0d3b58761247c51271af55bab4f731c90d35a41e.patch
 
 BuildRequires:	gtk-doc
 BuildRequires:	meson
@@ -101,7 +100,6 @@ of the provided Handy widgets in Glade.
 	%{nil}
 
 %meson_build
-%meson_build libhandy-doc
 
 %install
 %meson_install
