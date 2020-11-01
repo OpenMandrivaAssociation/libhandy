@@ -100,7 +100,6 @@ of the provided Handy widgets in Glade.
 	%{nil}
 
 %meson_build
-%meson_build libhandy-doc
 
 %install
 %meson_install
