@@ -24,6 +24,7 @@ BuildRequires:	pkgconfig(gladeui-2.0)
 BuildRequires:	pkgconfig(gnome-desktop-3.0)
 BuildRequires:	pkgconfig(gobject-introspection-1.0)
 BuildRequires:	pkgconfig(gtk+-3.0) >= 3.24.1
+BuildRequires:	pkgconfig(gi-docgen)
 
 %description
 libhandy is a library to help with developing UI for mobile devices
