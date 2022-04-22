@@ -90,7 +90,6 @@ of the provided Handy widgets in Glade.
 %build
 %meson \
 	-Dprofiling=false \
-	-Dstatic=false \
 	-Dintrospection=enabled \
 	-Dvapi=true \
 	-Dgtk_doc=true \
