@@ -117,7 +117,7 @@ of the provided Handy widgets in Glade.
 %files -n %{devname}
 %license COPYING
 %doc AUTHORS README.md
-%doc %{_datadir}/gtk-doc/html/libhandy-%{api}/
+#doc %{_datadir}/gtk-doc/html/libhandy-%{api}/
 %{_includedir}/libhandy-%{api}/
 %{_libdir}/libhandy-%{api}.so
 %{_datadir}/gir-1.0/Handy-%{api}.gir
