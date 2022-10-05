@@ -9,7 +9,7 @@
 %define devname %mklibname handy -d
 
 Name:		libhandy
-Version:	1.6.3
+Version:	1.8.0
 Release:	1
 Summary:	A GTK+ library to develop UI for mobile devices
 License:	LGPLv2+
