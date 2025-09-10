@@ -10,7 +10,7 @@
 
 Name:		libhandy
 Version:	1.8.3
-Release:	4
+Release:	5
 Summary:	A GTK+ library to develop UI for mobile devices
 License:	LGPLv2+
 Group:		Development/GNOME and GTK+
